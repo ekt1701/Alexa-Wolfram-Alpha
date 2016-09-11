@@ -1,0 +1,28 @@
+{
+    "intents": [
+        {
+            "intent": "askWolfRam",
+            "slots": [
+                {
+                    "name": "response",
+                    "type": "LITERAL"
+                }
+            ]
+        },
+      {
+      "intent": "AMAZON.HelpIntent"
+    },
+    {
+    	"intent": "AMAZON.StopIntent"
+    },
+    {
+    	"intent": "AMAZON.CancelIntent"
+    },
+    {
+      "intent": "AMAZON.YesIntent"
+    },
+    {
+    	"intent": "AMAZON.NoIntent"
+    }
+    ]
+}

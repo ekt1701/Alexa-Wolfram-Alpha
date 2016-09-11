@@ -1,0 +1,9 @@
+askWolfRam {what is the weather in london|response}
+askWolfRam {how tall is the statue of liberty|response}
+askWolfRam {when is the next full moon|response}
+askWolfRam {how fast can a cheetah run|response}
+askWolfRam {what is the synonym for develop|response}
+
+
+AMAZON.NoIntent no thank you
+AMAZON.HelpIntent i dont know
