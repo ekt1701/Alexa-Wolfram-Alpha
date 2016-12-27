@@ -105,12 +105,8 @@ def get_WolfRam(intent, session):
     app_id = "enter your app id"
 
     query = intent['slots']['response'].get('value')
+    query = query.replace(' ', '%20')
 
-    replace = {
-        " " : "%20",
-        }
-
-    query = multiple_replace(replace, query)
     url = "http://api.wolframalpha.com/v2/query?podindex=2&format=plaintext&appid=" + app_id +"&input="+query
     data = urllib2.urlopen(url)
     dataxml = ET.parse(data)
@@ -122,11 +118,7 @@ def get_WolfRam(intent, session):
         for plaintext in dataxmlroot.iter('plaintext'):
             result = plaintext.text
 
-    replace = {
-        "%20" : " ",
-        }
-
-    query = multiple_replace(replace, query)
+    query = query.replace('%20', ' ')
     speech_output = "The answer to your question: " + str(query) + " is: " + str(result) + " Would you like to ask another question?"
     reprompt_text = "I must be deaf, what did you say?"
     should_end_session = False
